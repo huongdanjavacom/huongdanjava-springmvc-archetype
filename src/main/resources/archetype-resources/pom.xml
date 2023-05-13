@@ -14,9 +14,9 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <org.springframework-version>6.0.7</org.springframework-version>
+    <org.springframework-version>6.0.9</org.springframework-version>
     <org.slf4j-version>2.0.7</org.slf4j-version>
-    <org.junit-version>5.9.2</org.junit-version>
+    <org.junit-version>5.9.3</org.junit-version>
     <jakarta.servlet-api-version>6.0.0</jakarta.servlet-api-version>
   </properties>
   <dependencies>
@@ -66,6 +66,18 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- JSTL -->
+    <dependency>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+    <dependency> <!-- JSTL Implementation -->
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+
     <!-- Test -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -79,7 +91,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.11.0</version>
         <configuration>
           <compilerArgument>-Xlint:all</compilerArgument>
           <showWarnings>true</showWarnings>
@@ -94,7 +106,7 @@
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>11.0.14</version>
+        <version>11.0.15</version>
         <configuration>
           <webApp>
             <contextPath>/springmvc</contextPath>
