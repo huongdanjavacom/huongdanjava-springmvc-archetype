@@ -11,13 +11,13 @@
   <version>${version}</version>
 
   <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
 
-    <org.springframework-version>6.0.9</org.springframework-version>
-    <org.slf4j-version>2.0.7</org.slf4j-version>
-    <org.junit-version>5.9.3</org.junit-version>
-    <jakarta.servlet-api-version>6.0.0</jakarta.servlet-api-version>
+    <org.springframework-version>6.1.9</org.springframework-version>
+    <org.slf4j-version>2.0.13</org.slf4j-version>
+    <org.junit-version>5.10.2</org.junit-version>
+    <jakarta.servlet-api-version>6.1.0</jakarta.servlet-api-version>
   </properties>
   <dependencies>
     <!-- Spring -->
@@ -99,14 +99,9 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.2</version>
-      </plugin>
-      <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>11.0.15</version>
+        <version>11.0.21</version>
         <configuration>
           <webApp>
             <contextPath>/springmvc</contextPath>
